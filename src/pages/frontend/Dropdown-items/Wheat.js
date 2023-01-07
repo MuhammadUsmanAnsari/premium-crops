@@ -1,7 +1,7 @@
 import React from 'react'
-import NavbarLight from '../../../../components/Header/NavbarLight'
-import wheat1 from '../../../../assets/wheat1.jpg'
-import wheat2 from '../../../../assets/weat2.jpg'
+import NavbarLight from '../../../components/Header/NavbarLight'
+import wheat1 from '../../../assets/wheat1.jpg'
+import wheat2 from '../../../assets/weat2.jpg'
 export default function Wheat() {
     return (
         <>

@@ -1,6 +1,6 @@
 import React from 'react'
-import NavbarLight from '../../../../components/Header/NavbarLight'
-import maize from '../../../../assets/maize.jpg'
+import NavbarLight from '../../../components/Header/NavbarLight'
+import maize from '../../../assets/maize.jpg'
 export default function Maize() {
   return (
     <div>

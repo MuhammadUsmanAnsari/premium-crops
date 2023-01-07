@@ -1,7 +1,7 @@
 import React from 'react'
-import NavbarLight from '../../../../components/Header/NavbarLight'
-import sugarcane1 from '../../../../assets/sugarcane1.jpg'
-import sugarcane2 from '../../../../assets/sugarcane2.jpg'
+import NavbarLight from '../../../components/Header/NavbarLight'
+import sugarcane1 from '../../../assets/sugarcane1.jpg'
+import sugarcane2 from '../../../assets/sugarcane2.jpg'
 export default function Sugarcane() {
   return (
     <>

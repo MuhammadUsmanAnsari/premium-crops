@@ -1,5 +1,5 @@
 import React from 'react'
-import NavbarLight from '../../../../components/Header/NavbarLight'
+import NavbarLight from '../../../components/Header/NavbarLight'
 
 export default function Oilseed() {
   return (
