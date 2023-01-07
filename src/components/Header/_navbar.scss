@@ -1,0 +1,35 @@
+nav{
+    position:absolute;
+    z-index: 2;
+    top: 0;
+}
+.companyName{
+    font-family:monospace;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+.last-dropdown{
+    cursor: pointer;
+}
+.nav-link{
+cursor: pointer;
+}
+@media only screen and (max-width: 992px) {    
+        nav{
+         background-color: black;   
+         .container{
+            .navbar-brand{
+                img{
+                    width: 50px;
+                }
+            }
+         }
+        }
+        .companyName{
+            font-size: large;
+            font-family:monospace;
+            font-weight: normal;
+            letter-spacing: normal;    
+        }
+}

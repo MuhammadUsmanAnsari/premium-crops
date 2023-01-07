@@ -1,0 +1,9 @@
+.gallery{
+   .col-md-6,.col-md-4,.col-md-3,.col,.col-6{
+        height: 200px;
+        overflow: hidden;
+        img{
+            height: 100%;
+        }
+    }
+}

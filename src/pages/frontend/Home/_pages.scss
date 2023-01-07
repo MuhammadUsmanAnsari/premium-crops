@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@700&family=Rubik+Dirt&display=swap');
+//carousol
+.carousel{
+    top: -100px;
+    .carousel-inner{
+        .carousel-item{             
+            .carousel-caption{
+                position: absolute;
+                top: 40%;
+                h1#special{
+                    font-family: 'Kalam', cursive;
+                    text-shadow: 0 3px 5px black;
+                    font-size:100px;
+                }
+                h1.agri{
+                    text-shadow: 0 3px 5px black;
+                    font-size: 80px;
+                    font-family: 'Franklin Gothic Medium', sans-serif;
+                }
+                h5{
+                    text-shadow: 0 3px 5px black;
+                }
+               
+        }
+
+    }
+}
+}
+.card{
+    a{
+        .card-img{
+            overflow: hidden;
+            img:hover{
+                transition: 3s;
+                transform: scale(1.2);
+
+            }
+        }
+    }
+
+}
+section{
+    .row{
+        background-color: rgba($color: #000000, $alpha: 0.5) ;
+       padding: 90px 10% ;
+        margin: 50px 0;
+        color: white;
+        .col{
+            .block{
+                display: inline-block;
+                width: auto;
+                border-bottom: 4px solid rgb(238, 158, 9);
+                h3{
+                    font-size: 50px;
+                    font-family: 'Kalam', cursive;
+                }
+            }
+        }
+
+      }
+      
+    background-image: url('https://wallpaper.dog/large/20535147.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.signin:hover{
+    transition: 1s;
+ box-shadow: inset 200px 0 0 black,inset -200px 0 0 black;
+}
+.notFound{
+        .col{
+            padding: 100px 0;
+            div{
+             font-size: 200px;
+            }
+        }
+}
+@media only screen and (max-width: 992px) {    
+    .carousel{
+        top: 0;
+        .carousel-inner{
+            .carousel-item img{
+                height:80vh ;
+                }
+                .carousel-caption{
+                    top: 40%;
+                    h1{
+                        font-size:70px !important;
+                    }
+                    
+                    }
+        }
+    }    
+    
+}
+@media only screen and (max-width: 576px) {
+    .carousel{
+        .carousel-inner{
+            .carousel-item{
+                img{
+                    height:65vh ;
+                }
+                .carousel-caption{
+                    top: 30%;
+                    h1#special{
+                        font-size:40px !important;
+
+                    }
+                    h1.agri{
+                        font-size:40px !important;
+
+                    }
+                }
+            }
+        }
+    }
+    .notFound{
+        .col{
+            div{
+             font-size: 100px;
+            }
+        }
+}
+     
+}
