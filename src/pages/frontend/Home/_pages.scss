@@ -26,19 +26,24 @@
     }
 }
 }
-.card{
-    a{
-        .card-img{
-            overflow: hidden;
-            img:hover{
-                transition: 3s;
-                transform: scale(1.2);
-
-            }
-        }
-    }
-
+.seeMore{
+    position: absolute;
+    top: 20%;
+    left: 25%;
+display: none;
 }
+.card-img{
+    overflow: hidden;
+}
+.card-img:hover .seeMore{
+    display: block ;
+}
+.hovered-pics:hover{
+    filter: grayscale(100%)blur(3px);
+    transition: 0.5s;
+    transform: scale(1.2);
+}
+    
 section{
     .row{
         background-color: rgba($color: #000000, $alpha: 0.5) ;

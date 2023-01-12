@@ -76,6 +76,7 @@ export default function NavbarLight() {
       </ul>
       <div className="d-flex align-items-center justify-content-center">
           <div className=" mx-2">
+          <Link type="button" to="/cart" className="btn btn-warning position-relative mx-3"><i className="fa-solid text-white fs-4 fa-cart-shopping"></i> </Link>
             <a href="https://www.facebook.com/UniversityOfAgricultureFaisalabadPakistan/" target="_blank"><i className="fa-brands fa-facebook fs-3 text-dark mx-1"></i></a>
             <a href="https://www.instagram.com/uaf_official/?hl=en" target="_blank"><i className="fa-brands fa-instagram fs-3 text-dark mx-1"></i></a>
             <a href="https://twitter.com/UniversityofAg2?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"><i className="fa-brands fa-twitter fs-3 text-dark mx-1"></i></a>

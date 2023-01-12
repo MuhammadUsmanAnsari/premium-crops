@@ -30,14 +30,16 @@ import Sushi from './Others/Rice-and-types/Sushi'
 import Footer from '../../components/Footer/Footer'
 //page not found
 import NotFound from '../PageNotFound'
+import Cart from './Home/Cart'
 export default function Index() {
   return (
     <>
             <main>
         <Routes>
-          <Route path='/gallery' element={<PrivateRoute Component={Gallery}/>}/>
+          <Route path='/gallery' element={< Gallery/>}/>
             <Route path='/' element={<Home/>}/>
             <Route path='/about' element={<About/>}/>
+            <Route path='/cart' element={<PrivateRoute Component={Cart}/>}/>
             {/* future agriculture */}
             <Route path='/new-technology' element={<NewTechnology/>}/>
             <Route path='/agriculture_4.0' element={<Agriculture/>}/>

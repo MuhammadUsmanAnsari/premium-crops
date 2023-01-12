@@ -12,14 +12,14 @@ main{
     min-height: 70vh;
 }
 .form-section{
-    background-color:rgb(238, 158, 9);
+background-color:rgb(238, 158, 9);
 min-height: 100vh;
 display: flex;
 align-items: center;
 }
 ::-webkit-scrollbar{
     background-color: white;
- width: 15px;   
+    width: 15px;   
 }
 ::-webkit-scrollbar-thumb{
     background-color:#bcbcbc;

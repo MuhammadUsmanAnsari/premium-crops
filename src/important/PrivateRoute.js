@@ -12,7 +12,7 @@ export default function PrivateRoute(props) {
     if (!isAuthenticated) {
         return <>
      <NavbarLight/> 
-     <Login restrict="Please Login to see this page"/>
+     <Login restrict="Please Login to see your products"/>
      </>
     }
     return (

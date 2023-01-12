@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useRef } from 'react'
+import React, { useContext, useEffect, useRef, useState } from 'react'
 import './_navbar.scss'
 import logo1 from '../../../src/assets/logo.png'
 import { Link } from 'react-router-dom'
@@ -8,9 +8,9 @@ import { auth } from '../../config/Firebase'
 import { onAuthStateChanged, signOut } from 'firebase/auth'
 
 export default function Navbar() {
-const values=useRef()
-const values1=useRef()
-const show=()=>{ 
+  const values=useRef()
+  const values1=useRef()
+  const show=()=>{ 
   switch (values.current.className) {
     case "d-none":
     values.current.className="d-block"
@@ -114,6 +114,7 @@ const handleLogOut=()=>{
         </li>
       </ul>
       <div className="d-flex align-items-center justify-content-center">
+      <Link type="button" to="/cart" className="btn btn-warning position-relative mx-3"><i className="fa-solid text-white fs-4 fa-cart-shopping"></i> </Link>
           {isAuthenticated?<button className='btn btn-warning px-4 rounded-pill text-white signin' onClick={handleLogOut}>LOGOUT</button>
             :<div className=" mx-2">
             <a href="https://www.facebook.com/UniversityOfAgricultureFaisalabadPakistan/" target="_blank"><i className="fa-brands fa-facebook fs-3 text-light mx-2"></i></a>

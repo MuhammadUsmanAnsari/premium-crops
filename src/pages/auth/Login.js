@@ -48,7 +48,7 @@ signInWithEmailAndPassword(auth, email, password)
         <div className="row py-5">
             <div className="col-12 offset-0 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
                 <div className="card px-4 px-md-5 py-5 shadow-lg rounded-4">
-                    <div className='text-danger text-center'>{props.restrict}</div>
+                    <h4 className='text-danger text-center'>{props.restrict}</h4>
                     <h2 className='text-center py-4'>LOGIN</h2>
                 <form className='text-center pb-4' onSubmit={handleSubmit}>
                     <div className="form-floating mb-3">
