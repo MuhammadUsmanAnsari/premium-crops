@@ -1,11 +1,14 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 //animation
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import list from './Data'
 import Product from './Product'
+import { AuthContext } from '../../../Context/AuthContext'
 
 export default function Products() {
+  //use context
+  const {setCounter}=useContext(AuthContext)
   useEffect(()=>{
     AOS.init({duration:1000})
   },[])  
@@ -21,6 +24,7 @@ export default function Products() {
     
     cart.push(items)
     setCart(cart)
+    setCounter(cart.length);
     // console.log(cart);
     localStorage.setItem("cart",JSON.stringify(cart))
   window.toastify("Added successfully.","success")

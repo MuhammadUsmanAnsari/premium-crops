@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import NavbarLight from '../../../components/Header/NavbarLight';
+import { AuthContext } from '../../../Context/AuthContext';
 
 export default function Cart() {
   const [cart,setCart]=useState([]);
-
+const {counter,setCounter}=useContext(AuthContext)
   useEffect(() => {
     const cartProduct = JSON.parse(localStorage.getItem("cart")) || []
     setCart(cartProduct)
@@ -12,6 +13,7 @@ const handleDelete=(get)=>{
   let filterCart=cart.filter((oldpro)=>{
     return oldpro.id!==get
   })
+  setCounter(cart.length-1);
   setCart(filterCart)
   localStorage.setItem("cart",JSON.stringify(filterCart))
   window.toastify("Removed successfully","success")
@@ -39,7 +41,8 @@ console.log(cart);
               <th scope="col">Image</th>
               <th scope="col">Product Name</th>
               <th scope="col">Price</th>
-              <th scope="col">Price</th>
+              <th scope="col" className='float-end'>Action</th>
+              <th scope="col"></th>
             </tr>
           </thead>
           <tbody>
@@ -49,7 +52,9 @@ console.log(cart);
               <td><img src={cart.img} className="rounded-circle" height="50px" width="50px" alt="" /> </td>
               <td>{cart.title}</td>
               <td>{cart.price}</td>
-              <td><button className="btn btn-danger" onClick={()=>{handleDelete(cart.id)}}><i className="fa-solid fa-xmark"></i></button></td>
+
+              <td><button className="btn btn-sm float-end mt-2 btn-danger rounded-pill" >Check Out</button></td>              
+              <td><button type="button" class="btn btn-sm btn-close float-end" onClick={()=>{handleDelete(cart.id)}} aria-label="Close"></button></td>
             </tr>
           })}
           </tbody>

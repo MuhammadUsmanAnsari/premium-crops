@@ -26,7 +26,7 @@ export default function Section() {
             <div className=" mt-5">
                 <h3 className='block'>Abdul Rehman</h3>
                 <div><u>Phone:</u> <a href="tel:+923187139577" className="fs-5 text-white text-decoration-none ">+92 318 7139577</a> </div> 
-                <div><u>Email:</u>  <a href="mailto:usmanarif2913@gmail.com" className="fs-5 text-white text-decoration-none "> usmanarif2913 @gmail.com</a></div>
+                <div><u>Email:</u>  <a href="mailto:abdulrehmannot@gmail.com" className="fs-5 text-white text-decoration-none "> abdulrehmannot@gmail.com</a></div>
                 </div>
           </div>
         </div>

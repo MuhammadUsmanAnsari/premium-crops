@@ -39,7 +39,7 @@ const show1=()=>{
   }
 }
 //authentication
-const {isAuthenticated,setAuthenticated}=useContext(AuthContext)
+const {isAuthenticated,setAuthenticated,counter,setCounter}=useContext(AuthContext)
 //useEffect
 useEffect(()=>{
   onAuthStateChanged(auth, (user) => {
@@ -50,6 +50,8 @@ useEffect(()=>{
         // ...
       }
     });
+    const cartProduct = JSON.parse(localStorage.getItem("cart")) || []
+    setCounter(cartProduct.length)
   },[])
 const handleLogOut=()=>{
   signOut(auth).then(() => {
@@ -114,7 +116,12 @@ const handleLogOut=()=>{
         </li>
       </ul>
       <div className="d-flex align-items-center justify-content-center">
-      <Link type="button" to="/cart" className="btn btn-warning position-relative mx-3"><i className="fa-solid text-white fs-4 fa-cart-shopping"></i> </Link>
+      <Link type="button" to="/cart" className="btn btn-warning position-relative mx-3"><i className="fa-solid text-white fs-4 fa-cart-shopping"></i> 
+      <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">{counter}    
+    <span class="visually-hidden">unread messages</span>
+  </span>
+      </Link>
+
           {isAuthenticated?<button className='btn btn-warning px-4 rounded-pill text-white signin' onClick={handleLogOut}>LOGOUT</button>
             :<div className=" mx-2">
             <a href="https://www.facebook.com/UniversityOfAgricultureFaisalabadPakistan/" target="_blank"><i className="fa-brands fa-facebook fs-3 text-light mx-2"></i></a>

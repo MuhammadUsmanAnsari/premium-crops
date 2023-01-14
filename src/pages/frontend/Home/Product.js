@@ -12,7 +12,7 @@ const Product=({items,handleCart})=>{
                   <div className="card-img products">
                         <img src={img} width="100%" height="160px" className="card-img-top hovered-pics" alt="picture"/>
                         <div className='seeMore '>
-                      <Link to={link} className="text-decoration-none fs-4 text-primary m-0 p-0" >See more...</Link>
+                      <Link to={link} className="text-decoration-none fs-4 text-primary m-0 p-0" ><button className='btn btn-sm btn-danger text-white shadow'>See more...</button></Link>
                         </div>
                     </div>
                     <div className="card-body text-center">

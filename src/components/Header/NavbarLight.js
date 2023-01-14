@@ -1,11 +1,20 @@
-import React, { useRef } from 'react'
+import React, { useContext, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import './_navbar.scss'
 import logo1 from '../../assets/logo.png'
+import { AuthContext } from '../../Context/AuthContext'
 
 export default function NavbarLight() {
+  const {counter,setCounter}=useContext(AuthContext)
   const values=useRef()
   const values1=useRef()
+  useEffect(()=>{
+    const cartProduct = JSON.parse(localStorage.getItem("cart")) || []
+    setCounter(cartProduct.length)
+  },[]);
+
+
+
   const show=()=>{ 
     switch (values.current.className) {
       case "d-none":
@@ -76,7 +85,11 @@ export default function NavbarLight() {
       </ul>
       <div className="d-flex align-items-center justify-content-center">
           <div className=" mx-2">
-          <Link type="button" to="/cart" className="btn btn-warning position-relative mx-3"><i className="fa-solid text-white fs-4 fa-cart-shopping"></i> </Link>
+          <Link type="button" to="/cart" className="btn btn-warning position-relative mx-3"><i className="fa-solid text-white fs-4 fa-cart-shopping"></i> 
+          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">{counter}    
+    <span class="visually-hidden">unread messages</span>
+    </span>
+          </Link>
             <a href="https://www.facebook.com/UniversityOfAgricultureFaisalabadPakistan/" target="_blank"><i className="fa-brands fa-facebook fs-3 text-dark mx-1"></i></a>
             <a href="https://www.instagram.com/uaf_official/?hl=en" target="_blank"><i className="fa-brands fa-instagram fs-3 text-dark mx-1"></i></a>
             <a href="https://twitter.com/UniversityofAg2?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"><i className="fa-brands fa-twitter fs-3 text-dark mx-1"></i></a>

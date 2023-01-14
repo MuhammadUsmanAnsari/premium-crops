@@ -31,7 +31,7 @@ export default function Footer() {
                                     </div>
                                     <div className="mt-4 text-warning">
                                         <h5><u>Abdul Rehman</u></h5>
-                                        <a href="mailto:usmanarif2913@gmail.com" className="text-white text-decoration-none ">usmanarif2913@gmail.com</a><br />
+                                        <a href="mailto:abdulrehmannot@gmail.com" className="text-white text-decoration-none ">abdulrehmannot@gmail.com</a><br />
                                         <a href="tel:+923187139577" className="text-white text-decoration-none ">+92 318 7139577</a>
                                     </div>
                                 </div>
